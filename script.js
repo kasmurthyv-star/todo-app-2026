@@ -15,7 +15,8 @@ function addTask() {
     }
 
     const li = document.createElement('li');
-    li.innerHTML = `
+    li.innerHTML = `<span onclick="this.style.textDecoration='line-through'" style="cursor:pointer;">${input.value}</span>
+    <button class="delete-btn" onclick="this.parentElement.remove(); updateCount();">Delete</button>
         <span>${input.value}</span>
         <button class="delete-btn" onclick="this.parentElement.remove(); updateCount();">Delete</button>
     `;
